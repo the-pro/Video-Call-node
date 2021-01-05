@@ -1,11 +1,11 @@
 document.getElementById("j").onclick = ()=>{
     var username = document.getElementById("um").value;
     var roomid = document.getElementById("rm").value;
-    open(`http://localhost:3000/${roomid}`,"_self");
+    open(`https://vc-ayas-app.herokuapp.com/${roomid}`,"_self");
 }
   document.getElementById("c").onclick = ()=>{
     // alert('gh');
     // var username = document.getElementById("um").value;
     document.getElementById("rm").value="_blank";
-    open(`http://localhost:3000/create`,"_self");
+    open(`https://vc-ayas-app.herokuapp.com/create`,"_self");
   }
