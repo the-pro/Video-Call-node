@@ -38,7 +38,7 @@ function createVideo(ROOM_ID) {
   const socket = io('/')
   const videoGrid = document.getElementById('video-grid')
   const myPeer = new Peer(undefined, {
-    host: 'peerr-ayas.herokuapp.com',
+    host: 'peer-ayas.herokuapp.com',
     port: '43459'
   })
   const myVideo = document.createElement('video')
