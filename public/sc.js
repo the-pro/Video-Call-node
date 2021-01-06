@@ -1,7 +1,7 @@
 document.getElementById("j").onclick = ()=>{
     var username = document.getElementById("um").value;
     var roomid = document.getElementById("rm").value;
-    fetch(`http://localhost:3000/${roomid}`,{
+    fetch(`https://vc-ayas-app.herokuapp.com/${roomid}`,{
       method:"GET",
       headers:{
         'Access-Control-Allow-Origin':'*',
@@ -96,7 +96,7 @@ function createVideo(ROOM_ID) {
     // alert('gh');
     // var username = document.getElementById("um").value;
     document.getElementById("rm").value="_blank";
-    fetch("http://localhost:3000/create",{
+    fetch("https://vc-ayas-app.herokuapp.com/create",{
       method:"POST",
       headers:{
         'Access-Control-Allow-Origin':'*',
