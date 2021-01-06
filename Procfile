@@ -1,2 +1,3 @@
-web: npm start
-web: peerjs -p 3001
+web: npm install
+web: node server.js
+web: peerjs -p 9000
