@@ -11,7 +11,7 @@ router.route('/').get(
     }
 )
 
-router.route('/create').get(
+router.route('/create').post(
     (req,res,next)=>{
         res.redirect(`/${uuidV4()}`)
     }
@@ -19,12 +19,12 @@ router.route('/create').get(
 
 router.route('/:roomid').get(
     (req,res,next)=>{
-        console.log("try");
-        res.render('room', { roomId: req.params.room },(err,html)=>{
-            res.send(html);
-        })
-        // res.status=200;
-        // res.send(JSON.stringify({roomID:req.params.roomid}));
+        // console.log("try");
+        // res.render('room', { roomId: req.params.room },(err,html)=>{
+        //     res.send(html);
+        // })
+        res.status=200;
+        res.send(JSON.stringify({roomID:req.params.roomid}));
     }
 )
 
