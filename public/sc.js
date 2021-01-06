@@ -39,7 +39,7 @@ function createVideo(ROOM_ID) {
   const videoGrid = document.getElementById('video-grid')
   const myPeer = new Peer(undefined, {
     host: 'vc-ayas-app.herokuapp.com',
-    port: '9000'
+    port: process.env.PORT
   })
   const myVideo = document.createElement('video')
   myVideo.muted = true
