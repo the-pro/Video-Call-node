@@ -12,7 +12,7 @@
 
   <script src="/socket.io/socket.io.js" defer></script>
   <!-- <script src="script.js" defer></script> -->
-<script src="sc.js" defer></script>
+<script src="script.js" defer></script>
 <style>
     #fk{
         width: 50%;
@@ -22,9 +22,15 @@
     }
     #video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 300px);
+      grid-template-columns: repeat(auto-fill, 400px);
       grid-auto-rows: 300px;
-      background-color: black;
+      background-color: #000000;
+      position:relative;
+      width: 60%;
+      height:100%;
+      float: left;
+      /* border: 3px solid #fca311; */
+      overflow-y: scroll;
     }
     #s{
       width: 100%;
@@ -49,6 +55,37 @@
       width:20%;
       height:100%;
       background-color: bisque;
+    }
+    #chat{
+      position: relative;
+      width: 40%;
+      height: 100%;
+      /* border: 3px solid #fca311; */
+      float: left;
+      overflow-y: scroll;
+      
+    }
+    #chatInput{
+      position: absolute;
+      width: 80%;
+      bottom: 0px;
+      float: left;
+    }
+    #chatSend{
+      position: absolute;
+      width: 20%;
+      bottom: 0px;
+      float: left;
+      right: 0px;
+      background-color: aquamarine;
+    }
+    #main{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: #14213d;
+      /* border: 2px solid #fca311; */
+      color: #ffffff;
     }
 </style>
     <body>

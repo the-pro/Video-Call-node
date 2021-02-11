@@ -6,25 +6,20 @@ const router = express.Router();
 
 router.route('/').get(
     (req,res,next)=>{
-        res.render('en.ejs');
+        res.render('index.ejs');
 
     }
 )
 
 router.route('/create').post(
     (req,res,next)=>{
-        res.redirect(`/${uuidV4()}`)
-    }
-)
-
-router.route('/:roomid').get(
-    (req,res,next)=>{
-        // console.log("try");
-        // res.render('room', { roomId: req.params.room },(err,html)=>{
-        //     res.send(html);
-        // })
+        console.log(req.body)
         res.status=200;
-        res.send(JSON.stringify({roomID:req.params.roomid}));
+        res.send(JSON.stringify({
+            roomID:uuidV4(),
+            username:req.username
+        }));
+
     }
 )
 
